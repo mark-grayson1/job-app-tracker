@@ -29,9 +29,9 @@ app.post("/api/jobs", (req, res) => {
     ...req.body,
     status: req.body.status || "applied",
   };
-  jobs.push(newJOb);
+  jobs.push(newJob);
   writeJobs(jobs);
-  res.status(201).json(newJOb);
+  res.status(201).json(newJob);
 });
 
 app.delete("/api/jobs/:id", (req, res) => {
